@@ -109,7 +109,6 @@
     <img src="images/slider/slide5.jpg" style="width:100%">
     
   </div>
-  <!-- Next and previous buttons -->
   
 </div>
 <br>
@@ -145,11 +144,28 @@
 </div> <!-- /.container -->
 </div><!-- /#main-wrapper -->
 
+<script>
+var slideIndex = 0;
+showSlides();
 
+// Next/previous controls
+
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.display = "block";
+  setTimeout(showSlides, 2500); // Change image every 2 seconds
+}</script>
 
 <script src="js/jquery.min.js"></script>
 <script src="js/jquery.backstretch.min.js"></script>
-<script src="js/jquery.flexslider.min.js"></script>
+
 <script src="js/bootstrap.min.js"></script>
 <script src="js/templatemo_script.js"></script>
 </body>
